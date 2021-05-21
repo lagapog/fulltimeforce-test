@@ -1,6 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
 import CircularProgress from '@material-ui/core/CircularProgress'
+import Commit from 'components/home/Commit'
 import ErrorMessage from 'components/utils/ErrorMessage'
 import useSWR from 'swr'
 
@@ -12,9 +13,14 @@ const getCommits = () => {
   if (!data) return <CircularProgress />
   return (
     data.map(item => (
-      <div key={item.sha}>
-        {item.commit.message}
-      </div>
+      <Commit
+        key={item.sha}
+        message={item.commit.message}
+        author={item.commit.author.name}
+        avatar={item.author.avatar_url}
+        sha={item.sha}
+        url={item.html_url}
+      />
     ))
   )
 }
