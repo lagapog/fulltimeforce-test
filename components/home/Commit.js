@@ -42,7 +42,7 @@ const Commit = ({ message, author, avatar, sha, url }) => {
         </Typography>
         <Typography className={classes.author}>
           {author.name}
-          <span>commited {formattedDate} ago</span>
+          <span>committed {formattedDate} ago</span>
         </Typography>
       </div>
       <Chip
