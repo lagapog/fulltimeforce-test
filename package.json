@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "description": "Fulltimeforce test based on NextJS",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "lint": "standard",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
   "standard": {
+    "env": [
+      "jest"
+    ],
     "global": [
       "fetch"
     ]
@@ -40,6 +43,9 @@
     "swr": "^0.5.6"
   },
   "devDependencies": {
+    "babel-jest": "^26.6.3",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "jest": "^26.6.3",
     "standard": "^16.0.3"
   }
 }
