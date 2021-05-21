@@ -8,7 +8,7 @@ const handler = async (req, res) => {
   const data = await response.json()
   switch (method) {
     case 'GET':
-      res.status(200).json({ data })
+      res.status(200).json(data)
       break
     default:
       res.setHeader('Allow', ['GET'])
