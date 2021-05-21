@@ -37,7 +37,7 @@ const History = () => {
   const classes = useStyles()
   return (
     <div className={classes.root}>
-      <Container>
+      <Container id='history'>
         {getCommits()}
       </Container>
     </div>
