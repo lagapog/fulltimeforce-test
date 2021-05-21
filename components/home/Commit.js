@@ -4,6 +4,7 @@ import Avatar from '@material-ui/core/Avatar'
 import Typography from '@material-ui/core/Typography'
 import Chip from '@material-ui/core/Chip'
 import PropTypes from 'prop-types'
+import { formatDistanceToNow } from 'date-fns'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -19,13 +20,19 @@ const useStyles = makeStyles(theme => ({
   },
   author: {
     fontSize: theme.spacing(1.8),
-    color: '#666'
+    color: '#999',
+    '& span': {
+      marginLeft: theme.spacing(1),
+      color: '#666',
+      fontSize: theme.spacing(1.6)
+    }
   }
 }))
 
 const Commit = ({ message, author, avatar, sha, url }) => {
   const classes = useStyles()
   const shortenSha = sha.slice(0, 8)
+  const formattedDate = formatDistanceToNow(new Date(author.date))
   return (
     <Paper className={classes.root}>
       <Avatar src={avatar} />
@@ -34,7 +41,8 @@ const Commit = ({ message, author, avatar, sha, url }) => {
           {message}
         </Typography>
         <Typography className={classes.author}>
-          {author}
+          {author.name}
+          <span>commited {formattedDate} ago</span>
         </Typography>
       </div>
       <Chip
@@ -50,7 +58,7 @@ const Commit = ({ message, author, avatar, sha, url }) => {
 
 Commit.propTypes = {
   message: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
+  author: PropTypes.object.isRequired,
   avatar: PropTypes.string.isRequired,
   sha: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired

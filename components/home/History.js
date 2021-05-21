@@ -16,7 +16,7 @@ const getCommits = () => {
       <Commit
         key={item.sha}
         message={item.commit.message}
-        author={item.commit.author.name}
+        author={item.commit.author}
         avatar={item.author.avatar_url}
         sha={item.sha}
         url={item.html_url}
