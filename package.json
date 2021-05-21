@@ -1,0 +1,33 @@
+{
+  "name": "fulltimeforce-test",
+  "version": "1.0.0",
+  "description": "Fulltimeforce test based on NextJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lagapog/fulltimeforce-test.git"
+  },
+  "keywords": [
+    "nextjs",
+    "react",
+    "node",
+    "express"
+  ],
+  "author": "Luis Agapito",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lagapog/fulltimeforce-test/issues"
+  },
+  "homepage": "https://github.com/lagapog/fulltimeforce-test#readme",
+  "dependencies": {
+    "next": "^10.2.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
