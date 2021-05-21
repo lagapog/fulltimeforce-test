@@ -23,7 +23,7 @@ const Banner = () => {
           Commit history
         </Typography>
         <Typography className={classes.paragraph}>
-          These are all the commits on this project
+          These are all commits on <a href='https://github.com/lagapog/fulltimeforce-test' target='_blank' rel='noreferrer'>this project</a>
         </Typography>
       </Container>
     </div>
