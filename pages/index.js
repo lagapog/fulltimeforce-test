@@ -1,6 +1,11 @@
+import Container from 'components/layout/Container'
+import Banner from 'components/home/Banner'
+
 const HomePage = () => {
   return (
-    <div>Welcome to Next.js!</div>
+    <Container>
+      <Banner />
+    </Container>
   )
 }
 
