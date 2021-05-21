@@ -32,6 +32,7 @@
   "homepage": "https://github.com/lagapog/fulltimeforce-test#readme",
   "dependencies": {
     "@material-ui/core": "^4.11.4",
+    "date-fns": "^2.21.3",
     "next": "^10.2.2",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
